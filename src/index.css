@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 43 65% 52%;
+    --primary-foreground: 0 0% 7%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 59%;
+    --accent: 43 65% 52%;
+    --accent-foreground: 0 0% 7%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 43 65% 52%;
+    --radius: 2px;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #121212;
+    color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(212, 175, 55, 0.3);
+    color: #FFFFFF;
+  }
+}
+
+@layer components {
+  .accent-text {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .heading-hero {
+    font-size: 120px;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+
+  .heading-xxl {
+    font-size: 80px;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+
+  .heading-xl {
+    font-size: 64px;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+
+  .heading-l {
+    font-size: 48px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+
+  .body-large {
+    font-size: 21px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  .body-small {
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+}
+
+@layer utilities {
+  .transition-primary {
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .transition-secondary {
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+@media (max-width: 767px) {
+  .heading-hero {
+    font-size: 48px;
+  }
+
+  .heading-xxl {
+    font-size: 40px;
+  }
+
+  .heading-xl {
+    font-size: 36px;
+  }
+
+  .heading-l {
+    font-size: 32px;
+  }
+
+  .body-large {
+    font-size: 18px;
+  }
+
+  .body-small {
+    font-size: 13px;
+  }
+}
+
+/* Lenis smooth scroll */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
